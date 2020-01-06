@@ -58,16 +58,40 @@
 		0D45061523C3CF720031B07F /* VOIPChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				0D45061623C3CF720031B07F /* AppDelegate.swift */,
-				0D45061823C3CF720031B07F /* SceneDelegate.swift */,
-				0D45061A23C3CF720031B07F /* ViewController.swift */,
-				0D45061C23C3CF720031B07F /* Main.storyboard */,
-				0D45062223C3CF740031B07F /* Assets.xcassets */,
-				0D45062423C3CF740031B07F /* LaunchScreen.storyboard */,
 				0D45062723C3CF740031B07F /* Info.plist */,
-				0D45061F23C3CF720031B07F /* VOIPChallenge.xcdatamodeld */,
+				0D45062F23C3D1140031B07F /* Model */,
+				0D45062E23C3D10F0031B07F /* View */,
+				0D45062D23C3D1000031B07F /* Controller */,
 			);
 			path = VOIPChallenge;
+			sourceTree = "<group>";
+		};
+		0D45062D23C3D1000031B07F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0D45061A23C3CF720031B07F /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		0D45062E23C3D10F0031B07F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0D45062423C3CF740031B07F /* LaunchScreen.storyboard */,
+				0D45061C23C3CF720031B07F /* Main.storyboard */,
+				0D45062223C3CF740031B07F /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0D45062F23C3D1140031B07F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0D45061F23C3CF720031B07F /* VOIPChallenge.xcdatamodeld */,
+				0D45061623C3CF720031B07F /* AppDelegate.swift */,
+				0D45061823C3CF720031B07F /* SceneDelegate.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -291,6 +315,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XCSQ883CT6;
 				INFOPLIST_FILE = VOIPChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -298,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eldorado.VOIPChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -309,6 +334,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XCSQ883CT6;
 				INFOPLIST_FILE = VOIPChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -316,7 +342,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eldorado.VOIPChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
