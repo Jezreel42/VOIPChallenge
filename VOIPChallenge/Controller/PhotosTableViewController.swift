@@ -1,5 +1,5 @@
 //
-//  PhotosNavigationController.swift
+//  PhotosTableViewController.swift
 //  VOIPChallenge
 //
 //  Created by Jezreel de Oliveira Barbosa on 06/01/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PhotosNavigationController: UINavigationController {
+class PhotosTableViewController: UIViewController {
     // Static Properties
     // Static Methods
     // Public Types
@@ -18,20 +18,26 @@ class PhotosNavigationController: UINavigationController {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-        start()
+        initView()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        start()
+        initView()
     }
     
     // Override Methods
     // Private Types
     // Private Properties
+    
+    private var tableView: UITableView {
+        return self.view as! UITableView
+    }
+    
     // Private Methods
     
-    private func start() {
-        viewControllers = [PhotosTableViewController()]
+    private func initView() {
+        self.view = UITableView()
+        
     }
 }
