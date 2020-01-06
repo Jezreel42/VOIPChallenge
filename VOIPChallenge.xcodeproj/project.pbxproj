@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0D45061723C3CF720031B07F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45061623C3CF720031B07F /* AppDelegate.swift */; };
-		0D45061923C3CF720031B07F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45061823C3CF720031B07F /* SceneDelegate.swift */; };
 		0D45061B23C3CF720031B07F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45061A23C3CF720031B07F /* ViewController.swift */; };
-		0D45061E23C3CF720031B07F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D45061C23C3CF720031B07F /* Main.storyboard */; };
 		0D45062123C3CF720031B07F /* VOIPChallenge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0D45061F23C3CF720031B07F /* VOIPChallenge.xcdatamodeld */; };
 		0D45062323C3CF740031B07F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D45062223C3CF740031B07F /* Assets.xcassets */; };
 		0D45062623C3CF740031B07F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D45062423C3CF740031B07F /* LaunchScreen.storyboard */; };
@@ -20,9 +18,7 @@
 /* Begin PBXFileReference section */
 		0D45061323C3CF720031B07F /* VOIPChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VOIPChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D45061623C3CF720031B07F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0D45061823C3CF720031B07F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0D45061A23C3CF720031B07F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0D45061D23C3CF720031B07F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D45062023C3CF720031B07F /* VOIPChallenge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VOIPChallenge.xcdatamodel; sourceTree = "<group>"; };
 		0D45062223C3CF740031B07F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D45062523C3CF740031B07F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -85,7 +81,6 @@
 			isa = PBXGroup;
 			children = (
 				0D45062423C3CF740031B07F /* LaunchScreen.storyboard */,
-				0D45061C23C3CF720031B07F /* Main.storyboard */,
 				0D45062223C3CF740031B07F /* Assets.xcassets */,
 			);
 			path = View;
@@ -96,7 +91,6 @@
 			children = (
 				0D45061F23C3CF720031B07F /* VOIPChallenge.xcdatamodeld */,
 				0D45061623C3CF720031B07F /* AppDelegate.swift */,
-				0D45061823C3CF720031B07F /* SceneDelegate.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,7 +101,6 @@
 				DA067D36454EBCA673D4A2E9 /* Pods-VOIPChallenge.debug.xcconfig */,
 				18E0E2308B3D799D3364AC13 /* Pods-VOIPChallenge.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -180,7 +173,6 @@
 			files = (
 				0D45062623C3CF740031B07F /* LaunchScreen.storyboard in Resources */,
 				0D45062323C3CF740031B07F /* Assets.xcassets in Resources */,
-				0D45061E23C3CF720031B07F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +210,6 @@
 			files = (
 				0D45061B23C3CF720031B07F /* ViewController.swift in Sources */,
 				0D45061723C3CF720031B07F /* AppDelegate.swift in Sources */,
-				0D45061923C3CF720031B07F /* SceneDelegate.swift in Sources */,
 				0D45062123C3CF720031B07F /* VOIPChallenge.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,14 +217,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0D45061C23C3CF720031B07F /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0D45061D23C3CF720031B07F /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0D45062423C3CF740031B07F /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
