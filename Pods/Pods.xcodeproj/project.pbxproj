@@ -1,0 +1,615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		002B71F5C1B1E9E0D2B491290415866C /* Stevia+Center.swift in Sources */ = {isa = PBXBuildFile; fileRef = C45E67F3D9F189C04857DA138732660E /* Stevia+Center.swift */; };
+		2128967EAF721D9C770BA589AF43ACBC /* Pods-VOIPChallenge-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5905EED060507C2F86059024EDC9DC3D /* Pods-VOIPChallenge-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2B008E14C85C7CA6893F40BF0E76A399 /* Stevia+Stacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5831EB49A4FBF0BE9A8398CF2DD4708 /* Stevia+Stacks.swift */; };
+		2F0AEA39F963D7BD02621E3347028B9B /* SteviaLayout-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C2B34AAD2E0337994F00E20FC21590C /* SteviaLayout-umbrella.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		2F966C45F157B8AD1EA56CE9780D6DA8 /* Stevia+Content.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6827D03FA10053507AA9A048BDCD45E1 /* Stevia+Content.swift */; };
+		6D405189463AA00E09752F404B3EFA7D /* Stevia+Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37E3BCDAF8CDA13E8F0B3C0EE2D49362 /* Stevia+Operators.swift */; };
+		7ABDC468B6C4ECAEEF4BBBC5454DA799 /* Stevia+Equation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0CB213BAA1BE9B0375209909F8725F5 /* Stevia+Equation.swift */; };
+		7DBBC4CF880016A6153E3B9DA1F4BA22 /* Stevia+Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CA64122E56EE55E4C739C7105EE7C40 /* Stevia+Notifications.swift */; };
+		824D1446B733AB05AC4B011ED7E5F61B /* Stevia+Baselines.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECD222969F9176A2AAEF785F73AAA0F /* Stevia+Baselines.swift */; };
+		83DD0F3A50E8BDA6F5B27D14E988B83A /* Stevia+FlexibleMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A9B30C52A8C3D0D2EA2E0A7B31B415B /* Stevia+FlexibleMargin.swift */; };
+		8F14ADFF944B6A1B9D9047A2F0EE12ED /* Stevia+Alignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73A58B0990DDC25A6D12F0427C389B78 /* Stevia+Alignment.swift */; };
+		92E488A8FB4621FE813B6FB21944C3FA /* Stevia+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54A4DC7CD742D42FE0FD78EE744CF9DC /* Stevia+Size.swift */; };
+		9D0C749519ED34F14A57C8A099FEA4B4 /* Pods-VOIPChallenge-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 808584CBBD337F078EDC7D3519D650AD /* Pods-VOIPChallenge-dummy.m */; };
+		A38A06D84AD98861C11FA0C1C1F2F3C5 /* Stevia+Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32170420A558AB3B09FBDD25F676501E /* Stevia+Constraints.swift */; };
+		A411A90DFDDCEEC618A16449500EC9F6 /* SteviaLayout-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F3FF9730700C19A0CA79BA75B5800DB /* SteviaLayout-dummy.m */; };
+		A844381B2096840FC921045D67B88CA3 /* Stevia+Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799C6A59EAD66BC78C228C338BC7C3D2 /* Stevia+Position.swift */; };
+		CDD6C7D45177D447840C8AFF8149934D /* Stevia+LayoutAnchors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14FDF18C18EC195B93BC34244DA845C1 /* Stevia+LayoutAnchors.swift */; };
+		DF0A1125E9B8081F2AC4DEB3A23A2C01 /* Stevia+Fill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98219843C37B4E9807CBE061BF776B1D /* Stevia+Fill.swift */; };
+		E0D3988AF22B551405F7AF71737B040D /* Stevia+DoubleDash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4521D1C55F6A6FA015A9E76E7BF1442E /* Stevia+DoubleDash.swift */; };
+		E6E0263F6239B30D5B3BE7770F841FBE /* Stevia+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6BCF6193D6DF3EB5474792F3D15AD26 /* Stevia+Hierarchy.swift */; };
+		E9148759EBEEB3DEEA58B1A04E627AE7 /* Stevia+GetConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD97C85334803E9A31B182E0B8AD9ECA /* Stevia+GetConstraint.swift */; };
+		F06AF87854B85D33FAD9D5B97A653D29 /* Stevia+Percentage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32D47D2244266DD84460681189DC7FE8 /* Stevia+Percentage.swift */; };
+		F4DCA0EFD2EC3893837AE4BE8A8BE34E /* Stevia+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD99B4A9B7BD5D32E0EE362375262A88 /* Stevia+Style.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B1C8E8D28BCC018A400DE7D42C9B9771 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF263AB023E40C4315ED4A97C6D7829F;
+			remoteInfo = SteviaLayout;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14FDF18C18EC195B93BC34244DA845C1 /* Stevia+LayoutAnchors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+LayoutAnchors.swift"; path = "Source/Stevia+LayoutAnchors.swift"; sourceTree = "<group>"; };
+		32170420A558AB3B09FBDD25F676501E /* Stevia+Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Constraints.swift"; path = "Source/Stevia+Constraints.swift"; sourceTree = "<group>"; };
+		32D47D2244266DD84460681189DC7FE8 /* Stevia+Percentage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Percentage.swift"; path = "Source/Stevia+Percentage.swift"; sourceTree = "<group>"; };
+		37E3BCDAF8CDA13E8F0B3C0EE2D49362 /* Stevia+Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Operators.swift"; path = "Source/Stevia+Operators.swift"; sourceTree = "<group>"; };
+		3CA64122E56EE55E4C739C7105EE7C40 /* Stevia+Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Notifications.swift"; path = "Source/Stevia+Notifications.swift"; sourceTree = "<group>"; };
+		4521D1C55F6A6FA015A9E76E7BF1442E /* Stevia+DoubleDash.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+DoubleDash.swift"; path = "Source/Stevia+DoubleDash.swift"; sourceTree = "<group>"; };
+		468ECFBD7A8EE53508D6E54FEC5069E9 /* SteviaLayout-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SteviaLayout-prefix.pch"; sourceTree = "<group>"; };
+		54A4DC7CD742D42FE0FD78EE744CF9DC /* Stevia+Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Size.swift"; path = "Source/Stevia+Size.swift"; sourceTree = "<group>"; };
+		5905EED060507C2F86059024EDC9DC3D /* Pods-VOIPChallenge-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-VOIPChallenge-umbrella.h"; sourceTree = "<group>"; };
+		59377EB2332271A3D9245F6471ECB56F /* Pods-VOIPChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VOIPChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		5C2B34AAD2E0337994F00E20FC21590C /* SteviaLayout-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SteviaLayout-umbrella.h"; sourceTree = "<group>"; };
+		6827D03FA10053507AA9A048BDCD45E1 /* Stevia+Content.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Content.swift"; path = "Source/Stevia+Content.swift"; sourceTree = "<group>"; };
+		68E75191BFF023D9CFE9FB9871590C3D /* Pods-VOIPChallenge.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-VOIPChallenge.modulemap"; sourceTree = "<group>"; };
+		73A58B0990DDC25A6D12F0427C389B78 /* Stevia+Alignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Alignment.swift"; path = "Source/Stevia+Alignment.swift"; sourceTree = "<group>"; };
+		799C6A59EAD66BC78C228C338BC7C3D2 /* Stevia+Position.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Position.swift"; path = "Source/Stevia+Position.swift"; sourceTree = "<group>"; };
+		7DACB8F8758ABDF55C31DA3BD8E157FA /* Pods-VOIPChallenge-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-VOIPChallenge-acknowledgements.markdown"; sourceTree = "<group>"; };
+		808584CBBD337F078EDC7D3519D650AD /* Pods-VOIPChallenge-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-VOIPChallenge-dummy.m"; sourceTree = "<group>"; };
+		873A99A167FAC086BF09AAF29B08D5D3 /* SteviaLayout.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SteviaLayout.xcconfig; sourceTree = "<group>"; };
+		87EA289820FFE15F25E1245F26411E3F /* SteviaLayout.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SteviaLayout.modulemap; sourceTree = "<group>"; };
+		8A9B30C52A8C3D0D2EA2E0A7B31B415B /* Stevia+FlexibleMargin.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+FlexibleMargin.swift"; path = "Source/Stevia+FlexibleMargin.swift"; sourceTree = "<group>"; };
+		935D552CED852AD11FD90EAECFA19780 /* libPods-VOIPChallenge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-VOIPChallenge.a"; path = "libPods-VOIPChallenge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98219843C37B4E9807CBE061BF776B1D /* Stevia+Fill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Fill.swift"; path = "Source/Stevia+Fill.swift"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F3FF9730700C19A0CA79BA75B5800DB /* SteviaLayout-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SteviaLayout-dummy.m"; sourceTree = "<group>"; };
+		A6BCF6193D6DF3EB5474792F3D15AD26 /* Stevia+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Hierarchy.swift"; path = "Source/Stevia+Hierarchy.swift"; sourceTree = "<group>"; };
+		B0F27D7C97559494219FA47061D6D4A1 /* Pods-VOIPChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-VOIPChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		B5831EB49A4FBF0BE9A8398CF2DD4708 /* Stevia+Stacks.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Stacks.swift"; path = "Source/Stevia+Stacks.swift"; sourceTree = "<group>"; };
+		BD99B4A9B7BD5D32E0EE362375262A88 /* Stevia+Style.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Style.swift"; path = "Source/Stevia+Style.swift"; sourceTree = "<group>"; };
+		C45E67F3D9F189C04857DA138732660E /* Stevia+Center.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Center.swift"; path = "Source/Stevia+Center.swift"; sourceTree = "<group>"; };
+		CD97C85334803E9A31B182E0B8AD9ECA /* Stevia+GetConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+GetConstraint.swift"; path = "Source/Stevia+GetConstraint.swift"; sourceTree = "<group>"; };
+		DE90CE8A0DA0F3A5364FCDD4803AD3EC /* libSteviaLayout.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libSteviaLayout.a; path = libSteviaLayout.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED0FBBC7D86757CD0807057FE4096BCC /* Pods-VOIPChallenge-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-VOIPChallenge-acknowledgements.plist"; sourceTree = "<group>"; };
+		F0CB213BAA1BE9B0375209909F8725F5 /* Stevia+Equation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Equation.swift"; path = "Source/Stevia+Equation.swift"; sourceTree = "<group>"; };
+		FECD222969F9176A2AAEF785F73AAA0F /* Stevia+Baselines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Stevia+Baselines.swift"; path = "Source/Stevia+Baselines.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BFD71A72D2C4346679C70ACEA6BAD582 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB90692213BE08AA5790B9693DBB97A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4BF01F6D95985790E404EC84D8476D49 /* Pods-VOIPChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				68E75191BFF023D9CFE9FB9871590C3D /* Pods-VOIPChallenge.modulemap */,
+				7DACB8F8758ABDF55C31DA3BD8E157FA /* Pods-VOIPChallenge-acknowledgements.markdown */,
+				ED0FBBC7D86757CD0807057FE4096BCC /* Pods-VOIPChallenge-acknowledgements.plist */,
+				808584CBBD337F078EDC7D3519D650AD /* Pods-VOIPChallenge-dummy.m */,
+				5905EED060507C2F86059024EDC9DC3D /* Pods-VOIPChallenge-umbrella.h */,
+				59377EB2332271A3D9245F6471ECB56F /* Pods-VOIPChallenge.debug.xcconfig */,
+				B0F27D7C97559494219FA47061D6D4A1 /* Pods-VOIPChallenge.release.xcconfig */,
+			);
+			name = "Pods-VOIPChallenge";
+			path = "Target Support Files/Pods-VOIPChallenge";
+			sourceTree = "<group>";
+		};
+		6616A2D4D85FD8CDA6C9FC22C97E57BA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				4BF01F6D95985790E404EC84D8476D49 /* Pods-VOIPChallenge */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		83AFCB742BF22D6B3A82168FADA48176 /* SteviaLayout */ = {
+			isa = PBXGroup;
+			children = (
+				73A58B0990DDC25A6D12F0427C389B78 /* Stevia+Alignment.swift */,
+				FECD222969F9176A2AAEF785F73AAA0F /* Stevia+Baselines.swift */,
+				C45E67F3D9F189C04857DA138732660E /* Stevia+Center.swift */,
+				32170420A558AB3B09FBDD25F676501E /* Stevia+Constraints.swift */,
+				6827D03FA10053507AA9A048BDCD45E1 /* Stevia+Content.swift */,
+				4521D1C55F6A6FA015A9E76E7BF1442E /* Stevia+DoubleDash.swift */,
+				F0CB213BAA1BE9B0375209909F8725F5 /* Stevia+Equation.swift */,
+				98219843C37B4E9807CBE061BF776B1D /* Stevia+Fill.swift */,
+				8A9B30C52A8C3D0D2EA2E0A7B31B415B /* Stevia+FlexibleMargin.swift */,
+				CD97C85334803E9A31B182E0B8AD9ECA /* Stevia+GetConstraint.swift */,
+				A6BCF6193D6DF3EB5474792F3D15AD26 /* Stevia+Hierarchy.swift */,
+				14FDF18C18EC195B93BC34244DA845C1 /* Stevia+LayoutAnchors.swift */,
+				3CA64122E56EE55E4C739C7105EE7C40 /* Stevia+Notifications.swift */,
+				37E3BCDAF8CDA13E8F0B3C0EE2D49362 /* Stevia+Operators.swift */,
+				32D47D2244266DD84460681189DC7FE8 /* Stevia+Percentage.swift */,
+				799C6A59EAD66BC78C228C338BC7C3D2 /* Stevia+Position.swift */,
+				54A4DC7CD742D42FE0FD78EE744CF9DC /* Stevia+Size.swift */,
+				B5831EB49A4FBF0BE9A8398CF2DD4708 /* Stevia+Stacks.swift */,
+				BD99B4A9B7BD5D32E0EE362375262A88 /* Stevia+Style.swift */,
+				9F8547D69474BC7D9F424F101A20CAFC /* Support Files */,
+			);
+			name = SteviaLayout;
+			path = SteviaLayout;
+			sourceTree = "<group>";
+		};
+		9F8547D69474BC7D9F424F101A20CAFC /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				87EA289820FFE15F25E1245F26411E3F /* SteviaLayout.modulemap */,
+				873A99A167FAC086BF09AAF29B08D5D3 /* SteviaLayout.xcconfig */,
+				9F3FF9730700C19A0CA79BA75B5800DB /* SteviaLayout-dummy.m */,
+				468ECFBD7A8EE53508D6E54FEC5069E9 /* SteviaLayout-prefix.pch */,
+				5C2B34AAD2E0337994F00E20FC21590C /* SteviaLayout-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SteviaLayout";
+			sourceTree = "<group>";
+		};
+		B4CBEA7E78B00F6EDF214EF74A3AE869 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				935D552CED852AD11FD90EAECFA19780 /* libPods-VOIPChallenge.a */,
+				DE90CE8A0DA0F3A5364FCDD4803AD3EC /* libSteviaLayout.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				D0084CFB2A907B8F5ECF2535A2C13978 /* Pods */,
+				B4CBEA7E78B00F6EDF214EF74A3AE869 /* Products */,
+				6616A2D4D85FD8CDA6C9FC22C97E57BA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D0084CFB2A907B8F5ECF2535A2C13978 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83AFCB742BF22D6B3A82168FADA48176 /* SteviaLayout */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		7646C089AE62A56808C9076342360DBA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F0AEA39F963D7BD02621E3347028B9B /* SteviaLayout-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		82E0E74A34F49CC8478BA85B5CEB4330 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2128967EAF721D9C770BA589AF43ACBC /* Pods-VOIPChallenge-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A5154DEEB06D83265A35552498CAE831 /* Pods-VOIPChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F64C19F14A34236B8CE915618170DAB6 /* Build configuration list for PBXNativeTarget "Pods-VOIPChallenge" */;
+			buildPhases = (
+				82E0E74A34F49CC8478BA85B5CEB4330 /* Headers */,
+				AA275198291C7E3E87A34BAD42499E82 /* Sources */,
+				EB90692213BE08AA5790B9693DBB97A8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1E4E3C769123685D70E1DF887C34300C /* PBXTargetDependency */,
+			);
+			name = "Pods-VOIPChallenge";
+			productName = "Pods-VOIPChallenge";
+			productReference = 935D552CED852AD11FD90EAECFA19780 /* libPods-VOIPChallenge.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CF263AB023E40C4315ED4A97C6D7829F /* SteviaLayout */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 85EA34C2AA660A6173ADD191FA97E8D9 /* Build configuration list for PBXNativeTarget "SteviaLayout" */;
+			buildPhases = (
+				7646C089AE62A56808C9076342360DBA /* Headers */,
+				3DB4BFC869D2009EEE122EB658FB16B7 /* Sources */,
+				BFD71A72D2C4346679C70ACEA6BAD582 /* Frameworks */,
+				D70048F0F1AF9F593C39C1330031482F /* Copy generated compatibility header */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SteviaLayout;
+			productName = SteviaLayout;
+			productReference = DE90CE8A0DA0F3A5364FCDD4803AD3EC /* libSteviaLayout.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = B4CBEA7E78B00F6EDF214EF74A3AE869 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A5154DEEB06D83265A35552498CAE831 /* Pods-VOIPChallenge */,
+				CF263AB023E40C4315ED4A97C6D7829F /* SteviaLayout */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D70048F0F1AF9F593C39C1330031482F /* Copy generated compatibility header */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h",
+				"${PODS_ROOT}/Headers/Public/Stevia/SteviaLayout.modulemap",
+				"${PODS_ROOT}/Headers/Public/Stevia/SteviaLayout-umbrella.h",
+			);
+			name = "Copy generated compatibility header";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap",
+				"${BUILT_PRODUCTS_DIR}/SteviaLayout-umbrella.h",
+				"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "COMPATIBILITY_HEADER_PATH=\"${BUILT_PRODUCTS_DIR}/Swift Compatibility Header/${PRODUCT_MODULE_NAME}-Swift.h\"\nMODULE_MAP_PATH=\"${BUILT_PRODUCTS_DIR}/${PRODUCT_MODULE_NAME}.modulemap\"\n\nditto \"${DERIVED_SOURCES_DIR}/${PRODUCT_MODULE_NAME}-Swift.h\" \"${COMPATIBILITY_HEADER_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Stevia/SteviaLayout.modulemap\" \"${MODULE_MAP_PATH}\"\nditto \"${PODS_ROOT}/Headers/Public/Stevia/SteviaLayout-umbrella.h\" \"${BUILT_PRODUCTS_DIR}\"\nprintf \"\\n\\nmodule ${PRODUCT_MODULE_NAME}.Swift {\\n  header \\\"${COMPATIBILITY_HEADER_PATH}\\\"\\n  requires objc\\n}\\n\" >> \"${MODULE_MAP_PATH}\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3DB4BFC869D2009EEE122EB658FB16B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F14ADFF944B6A1B9D9047A2F0EE12ED /* Stevia+Alignment.swift in Sources */,
+				824D1446B733AB05AC4B011ED7E5F61B /* Stevia+Baselines.swift in Sources */,
+				002B71F5C1B1E9E0D2B491290415866C /* Stevia+Center.swift in Sources */,
+				A38A06D84AD98861C11FA0C1C1F2F3C5 /* Stevia+Constraints.swift in Sources */,
+				2F966C45F157B8AD1EA56CE9780D6DA8 /* Stevia+Content.swift in Sources */,
+				E0D3988AF22B551405F7AF71737B040D /* Stevia+DoubleDash.swift in Sources */,
+				7ABDC468B6C4ECAEEF4BBBC5454DA799 /* Stevia+Equation.swift in Sources */,
+				DF0A1125E9B8081F2AC4DEB3A23A2C01 /* Stevia+Fill.swift in Sources */,
+				83DD0F3A50E8BDA6F5B27D14E988B83A /* Stevia+FlexibleMargin.swift in Sources */,
+				E9148759EBEEB3DEEA58B1A04E627AE7 /* Stevia+GetConstraint.swift in Sources */,
+				E6E0263F6239B30D5B3BE7770F841FBE /* Stevia+Hierarchy.swift in Sources */,
+				CDD6C7D45177D447840C8AFF8149934D /* Stevia+LayoutAnchors.swift in Sources */,
+				7DBBC4CF880016A6153E3B9DA1F4BA22 /* Stevia+Notifications.swift in Sources */,
+				6D405189463AA00E09752F404B3EFA7D /* Stevia+Operators.swift in Sources */,
+				F06AF87854B85D33FAD9D5B97A653D29 /* Stevia+Percentage.swift in Sources */,
+				A844381B2096840FC921045D67B88CA3 /* Stevia+Position.swift in Sources */,
+				92E488A8FB4621FE813B6FB21944C3FA /* Stevia+Size.swift in Sources */,
+				2B008E14C85C7CA6893F40BF0E76A399 /* Stevia+Stacks.swift in Sources */,
+				F4DCA0EFD2EC3893837AE4BE8A8BE34E /* Stevia+Style.swift in Sources */,
+				A411A90DFDDCEEC618A16449500EC9F6 /* SteviaLayout-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA275198291C7E3E87A34BAD42499E82 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D0C749519ED34F14A57C8A099FEA4B4 /* Pods-VOIPChallenge-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1E4E3C769123685D70E1DF887C34300C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SteviaLayout;
+			target = CF263AB023E40C4315ED4A97C6D7829F /* SteviaLayout */;
+			targetProxy = B1C8E8D28BCC018A400DE7D42C9B9771 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1422B121EAEAEA11307496903FA623C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		169892F355B9FACE75B10DCF878A94B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 873A99A167FAC086BF09AAF29B08D5D3 /* SteviaLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SteviaLayout/SteviaLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8;
+				MODULEMAP_FILE = Headers/Public/Stevia/SteviaLayout.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Stevia;
+				PRODUCT_NAME = SteviaLayout;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		62DB974A2B6FADB2408C9EBA8983DBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 59377EB2332271A3D9245F6471ECB56F /* Pods-VOIPChallenge.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VOIPChallenge/Pods-VOIPChallenge.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		82AC60FA2B20769569810C5833AE3B7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 873A99A167FAC086BF09AAF29B08D5D3 /* SteviaLayout.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/SteviaLayout/SteviaLayout-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8;
+				MODULEMAP_FILE = Headers/Public/Stevia/SteviaLayout.modulemap;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_MODULE_NAME = Stevia;
+				PRODUCT_NAME = SteviaLayout;
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E48DE17EE0DEC5189F9BF69D9750C1CC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0F27D7C97559494219FA47061D6D4A1 /* Pods-VOIPChallenge.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-VOIPChallenge/Pods-VOIPChallenge.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ED7888FA6713EABBF66D26A8003AD1CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ED7888FA6713EABBF66D26A8003AD1CA /* Debug */,
+				1422B121EAEAEA11307496903FA623C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		85EA34C2AA660A6173ADD191FA97E8D9 /* Build configuration list for PBXNativeTarget "SteviaLayout" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				82AC60FA2B20769569810C5833AE3B7B /* Debug */,
+				169892F355B9FACE75B10DCF878A94B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F64C19F14A34236B8CE915618170DAB6 /* Build configuration list for PBXNativeTarget "Pods-VOIPChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				62DB974A2B6FADB2408C9EBA8983DBEF /* Debug */,
+				E48DE17EE0DEC5189F9BF69D9750C1CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

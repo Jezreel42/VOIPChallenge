@@ -1,0 +1,6 @@
+module Pods_VOIPChallenge {
+  umbrella header "Pods-VOIPChallenge-umbrella.h"
+
+  export *
+  module * { export * }
+}
