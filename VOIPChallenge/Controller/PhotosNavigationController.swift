@@ -32,6 +32,6 @@ class PhotosNavigationController: UINavigationController {
     // Private Methods
     
     private func start() {
-        viewControllers = [PhotosTableViewController()]
+        viewControllers = [PhotosTableViewController(nibName: nil, bundle: nil)]
     }
 }

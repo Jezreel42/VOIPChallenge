@@ -32,7 +32,7 @@ class PhotosTableViewController: UITableViewController {
     // Private Methods
     
     private func initView() {
-        
+        tableView.register(PhotosTableViewCell.self, forCellReuseIdentifier: PhotosTableViewCell.reuseIdentifier)
     }
 }
 
@@ -46,7 +46,11 @@ extension PhotosTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "") as! UITableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: PhotosTableViewCell.reuseIdentifier) as! PhotosTableViewCell
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return PhotosTableViewCell.rowHeight
     }
 }
