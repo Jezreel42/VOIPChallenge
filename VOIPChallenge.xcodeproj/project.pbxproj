@@ -101,8 +101,8 @@
 			children = (
 				0D45061F23C3CF720031B07F /* VOIPChallenge.xcdatamodeld */,
 				0D45061623C3CF720031B07F /* AppDelegate.swift */,
-				0DB89A3623C4C99900A867FC /* Profile.swift */,
 				0DB89A3823C4E14300A867FC /* Database.swift */,
+				0DB89A3623C4C99900A867FC /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -374,7 +374,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eldorado.VOIPChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -394,7 +394,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.eldorado.VOIPChallenge;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

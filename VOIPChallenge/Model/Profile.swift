@@ -24,8 +24,18 @@ class Profile: Decodable {
     let url: URL
     let thumbnailUrl: URL
     
-    private(set) var photoImage: UIImage? = nil
-    private(set) var thumbnailImage: UIImage? = nil
+    var photoImage: UIImage? {
+        if privatePhotoImage == nil {
+            fetchPhotoImage()
+        }
+        return privatePhotoImage
+    }
+    var thumbnailImage: UIImage? {
+        if privateThumbnailImage == nil {
+            fetchThumbnailImage()
+        }
+        return privateThumbnailImage
+    }
     
     // Public Methods
     // Initialisation/Lifecycle Methods
@@ -40,7 +50,6 @@ class Profile: Decodable {
         let thumbnailUrlString = try container.decode(String.self, forKey: .thumbnailUrl)
         thumbnailUrl = URL(string: thumbnailUrlString)!
         
-//        fetchImages()
     }
     
     // Override Methods
@@ -55,24 +64,26 @@ class Profile: Decodable {
     }
     
     // Private Properties
+    
+    private var privatePhotoImage: UIImage? = nil
+    private var privateThumbnailImage: UIImage? = nil
+    
     // Private Methods
     
-    private func fetchImages() {
-        if self.photoImage == nil {
-            let task = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
-                guard let data = data, error == nil else { return }
-                self.photoImage = UIImage(data: data, scale: UIScreen.main.scale)
-                NotificationCenter.default.post(name: Profile.photoImageDownloadedNN, object: self)
-            }
-            task.resume()
+    private func fetchPhotoImage() {
+        let task = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
+            guard let data = data, error == nil else { return }
+            self.privatePhotoImage = UIImage(data: data)
+            NotificationCenter.default.post(name: Profile.photoImageDownloadedNN, object: self)
         }
-        if self.thumbnailImage == nil {
-            let task = URLSession(configuration: .default).dataTask(with: thumbnailUrl) { (data, response, error) in
-                guard let data = data, error == nil else { return }
-                self.thumbnailImage = UIImage(data: data, scale: UIScreen.main.scale)
-                NotificationCenter.default.post(name: Profile.photoImageDownloadedNN, object: self)
-            }
-            task.resume()
+        task.resume()
+    }
+    private func fetchThumbnailImage() {
+        let task = URLSession(configuration: .default).dataTask(with: thumbnailUrl) { (data, response, error) in
+            guard let data = data, error == nil else { return }
+            self.privateThumbnailImage = UIImage(data: data)
+            NotificationCenter.default.post(name: Profile.thumbnailImageDownloadedNN, object: self)
         }
+        task.resume()
     }
 }

@@ -13,15 +13,20 @@ class PhotosTableViewCell: UITableViewCell {
     // Static properties
     
     static let reuseIdentifier: String = "PhotosTableViewCell"
-    static let rowHeight: CGFloat = 166.0
+    static let rowHeight: CGFloat = 116.0
     
     // Public Types
     // Public Properties
     // Public Methods
     
     func fill(with profile: Profile) {
+        self.profile = profile
         thumbnailImageView.image = profile.thumbnailImage
         titleLabel.text = profile.title
+        
+        if thumbnailImageView.image == nil {
+            NotificationCenter.default.addObserver(self, selector: #selector(thumbnailImageDidDownloaded), name: Profile.thumbnailImageDownloadedNN, object: profile)
+        }
     }
     
     // Initialisation/Lifecycle Methods
@@ -35,17 +40,41 @@ class PhotosTableViewCell: UITableViewCell {
     }
     
     required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: coder)
+        
+        renderSuperView()
+        renderLayout()
+        renderStyle()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // Override Methods
+    
+    override func prepareForReuse() {
+        NotificationCenter.default.removeObserver(self)
+        thumbnailImageView.image = nil
+        titleLabel.text = nil
+        profile = nil
+    }
+    
     // Private Types
     // Private Properties
+    
+    private weak var profile: Profile?
     
     private let thumbnailImageView = UIImageView()
     private let titleLabel = UILabel()
     
     // Private Methods
+    
+    @objc private func thumbnailImageDidDownloaded() {
+        DispatchQueue.main.async {
+            self.thumbnailImageView.image = self.profile?.thumbnailImage
+        }
+    }
     
     private func renderSuperView() {
         sv(
@@ -55,7 +84,7 @@ class PhotosTableViewCell: UITableViewCell {
     }
     
     private func renderLayout() {
-        thumbnailImageView.size(150).centerVertically().left(16)
+        thumbnailImageView.size(100).centerVertically().left(16)
         titleLabel.Left == thumbnailImageView.Right + 16
         titleLabel.Top == thumbnailImageView.Top
         titleLabel.right(16)
