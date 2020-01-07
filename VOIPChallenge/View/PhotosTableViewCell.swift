@@ -93,6 +93,9 @@ class PhotosTableViewCell: UITableViewCell {
     }
     
     private func renderStyle() {
+        style { (s) in
+            s.selectionStyle = .none
+        }
         titleLabel.style { (s) in
             s.numberOfLines = 0
         }
