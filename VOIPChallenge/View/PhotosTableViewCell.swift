@@ -18,6 +18,12 @@ class PhotosTableViewCell: UITableViewCell {
     // Public Types
     // Public Properties
     // Public Methods
+    
+    func fill(with profile: Profile) {
+        thumbnailImageView.image = profile.thumbnailImage
+        titleLabel.text = profile.title
+    }
+    
     // Initialisation/Lifecycle Methods
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {

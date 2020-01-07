@@ -14,6 +14,8 @@
 		0D45063123C3F99C0031B07F /* PhotosNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D45063023C3F99C0031B07F /* PhotosNavigationController.swift */; };
 		0DB89A3323C3FBA500A867FC /* PhotosTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB89A3223C3FBA500A867FC /* PhotosTableViewController.swift */; };
 		0DB89A3523C4C58C00A867FC /* PhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB89A3423C4C58C00A867FC /* PhotosTableViewCell.swift */; };
+		0DB89A3723C4C99900A867FC /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB89A3623C4C99900A867FC /* Profile.swift */; };
+		0DB89A3923C4E14300A867FC /* Database.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DB89A3823C4E14300A867FC /* Database.swift */; };
 		BDCE04CC730C90F8AF073B95 /* libPods-VOIPChallenge.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B703A59943D50DDFE31A9542 /* libPods-VOIPChallenge.a */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +29,8 @@
 		0D45063023C3F99C0031B07F /* PhotosNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosNavigationController.swift; sourceTree = "<group>"; };
 		0DB89A3223C3FBA500A867FC /* PhotosTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewController.swift; sourceTree = "<group>"; };
 		0DB89A3423C4C58C00A867FC /* PhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosTableViewCell.swift; sourceTree = "<group>"; };
+		0DB89A3623C4C99900A867FC /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		0DB89A3823C4E14300A867FC /* Database.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Database.swift; sourceTree = "<group>"; };
 		18E0E2308B3D799D3364AC13 /* Pods-VOIPChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOIPChallenge.release.xcconfig"; path = "Target Support Files/Pods-VOIPChallenge/Pods-VOIPChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		B703A59943D50DDFE31A9542 /* libPods-VOIPChallenge.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VOIPChallenge.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA067D36454EBCA673D4A2E9 /* Pods-VOIPChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VOIPChallenge.debug.xcconfig"; path = "Target Support Files/Pods-VOIPChallenge/Pods-VOIPChallenge.debug.xcconfig"; sourceTree = "<group>"; };
@@ -97,6 +101,8 @@
 			children = (
 				0D45061F23C3CF720031B07F /* VOIPChallenge.xcdatamodeld */,
 				0D45061623C3CF720031B07F /* AppDelegate.swift */,
+				0DB89A3623C4C99900A867FC /* Profile.swift */,
+				0DB89A3823C4E14300A867FC /* Database.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -214,10 +220,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DB89A3723C4C99900A867FC /* Profile.swift in Sources */,
 				0DB89A3523C4C58C00A867FC /* PhotosTableViewCell.swift in Sources */,
 				0D45063123C3F99C0031B07F /* PhotosNavigationController.swift in Sources */,
 				0D45061723C3CF720031B07F /* AppDelegate.swift in Sources */,
 				0DB89A3323C3FBA500A867FC /* PhotosTableViewController.swift in Sources */,
+				0DB89A3923C4E14300A867FC /* Database.swift in Sources */,
 				0D45062123C3CF720031B07F /* VOIPChallenge.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
