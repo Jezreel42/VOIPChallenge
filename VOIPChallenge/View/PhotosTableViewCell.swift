@@ -22,6 +22,7 @@ class PhotosTableViewCell: UITableViewCell {
     func fill(with profile: Profile) {
         self.profile = profile
         thumbnailImageView.image = profile.thumbnailImage
+        idLabel.text = "ID: \(profile.id)"
         titleLabel.text = profile.title
         
         if thumbnailImageView.image == nil {
@@ -56,6 +57,7 @@ class PhotosTableViewCell: UITableViewCell {
     override func prepareForReuse() {
         NotificationCenter.default.removeObserver(self)
         thumbnailImageView.image = nil
+        idLabel.text = nil
         titleLabel.text = nil
         profile = nil
     }
@@ -66,6 +68,7 @@ class PhotosTableViewCell: UITableViewCell {
     private weak var profile: Profile?
     
     private let thumbnailImageView = UIImageView()
+    private let idLabel = UILabel()
     private let titleLabel = UILabel()
     
     // Private Methods
@@ -79,14 +82,20 @@ class PhotosTableViewCell: UITableViewCell {
     private func renderSuperView() {
         sv(
             thumbnailImageView,
+            idLabel,
             titleLabel
         )
     }
     
     private func renderLayout() {
         thumbnailImageView.size(100).centerVertically().left(16)
+        
+        idLabel.Left == thumbnailImageView.Right + 16
+        idLabel.Top == thumbnailImageView.Top
+        idLabel.right(16)
+        
         titleLabel.Left == thumbnailImageView.Right + 16
-        titleLabel.Top == thumbnailImageView.Top
+        titleLabel.Top == idLabel.Bottom
         titleLabel.right(16)
         
         layoutIfNeeded()

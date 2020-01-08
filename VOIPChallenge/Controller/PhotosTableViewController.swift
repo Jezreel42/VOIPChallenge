@@ -79,7 +79,8 @@ extension PhotosTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        photoDetailViewController.profile = Database.profiles[indexPath.row]
+        let album = Database.profiles.filter({$0.albumId == indexPath.section + 1})
+        photoDetailViewController.profile = album[indexPath.row]
         navigationController?.pushViewController(photoDetailViewController, animated: true)
     }
     
