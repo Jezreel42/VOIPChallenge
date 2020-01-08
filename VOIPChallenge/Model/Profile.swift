@@ -26,12 +26,14 @@ class Profile: Decodable {
     let thumbnailUrl: URL
     
     var photoImage: UIImage? {
+        getPhotoImage()
         if privatePhotoImage == nil {
             fetchPhotoImage()
         }
         return privatePhotoImage
     }
     var thumbnailImage: UIImage? {
+        getThumbnailImage()
         if privateThumbnailImage == nil {
             fetchThumbnailImage()
         }
@@ -50,8 +52,6 @@ class Profile: Decodable {
         url = URL(string: urlString)!
         let thumbnailUrlString = try container.decode(String.self, forKey: .thumbnailUrl)
         thumbnailUrl = URL(string: thumbnailUrlString)!
-        
-        getThumbnailImage()
     }
     
     // Override Methods
@@ -77,6 +77,7 @@ class Profile: Decodable {
             guard let data = data, error == nil, let image = UIImage(data: data) else { return }
             self.privatePhotoImage = image
             NotificationCenter.default.post(name: Profile.photoImageDownloadedNN, object: self)
+            self.savePhotoImage()
         }
         task.resume()
     }
@@ -102,7 +103,7 @@ class Profile: Decodable {
             
             do {
                 if let profile = try context.fetch(request).first(where: { (object) -> Bool in
-                    object.value(forKey: "id") as! Int == self.id
+                    object.value(forKey: "id") as? Int ?? 0 == self.id
                 }) {
                     profile.setValue(imageData, forKey: "thumbnailImage")
                 }
@@ -129,10 +130,61 @@ class Profile: Decodable {
             
             do {
                 if let profile = try context.fetch(request).first(where: { (object) -> Bool in
-                    object.value(forKey: "id") as! Int == self.id
+                    object.value(forKey: "id") as? Int ?? 0 == self.id
                 }), let imageData = profile.value(forKey: "thumbnailImage") as? Data {
                     
                     self.privateThumbnailImage = UIImage(data: imageData)
+                }
+            }
+            catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+            }
+        }
+    }
+    
+    private func savePhotoImage() {
+        DispatchQueue.main.async {
+            guard
+                let imageData = self.privatePhotoImage?.pngData(),
+                let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext,
+                let entity = NSEntityDescription.entity(forEntityName: "ProfileEntity", in: context)
+            else { return }
+            
+            let request = NSFetchRequest<NSManagedObject>(entityName: "ProfileEntity")
+            
+            do {
+                if let profile = try context.fetch(request).first(where: { (object) -> Bool in
+                    object.value(forKey: "id") as? Int ?? 0 == self.id
+                }) {
+                    profile.setValue(imageData, forKey: "photoImage")
+                }
+                else {
+                    let profile = NSManagedObject(entity: entity, insertInto: context)
+                    profile.setValue(imageData, forKey: "photoImage")
+                    profile.setValue(self.id, forKey: "id")
+                }
+                
+                try context.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+        }
+    }
+    
+    private func getPhotoImage() {
+        DispatchQueue.main.async {
+            guard
+                let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+            else { return }
+            
+            let request = NSFetchRequest<NSManagedObject>(entityName: "ProfileEntity")
+            
+            do {
+                if let profile = try context.fetch(request).first(where: { (object) -> Bool in
+                    object.value(forKey: "id") as? Int ?? 0 == self.id
+                }), let imageData = profile.value(forKey: "photoImage") as? Data {
+                    
+                    self.privatePhotoImage = UIImage(data: imageData)
                 }
             }
             catch let error as NSError {
