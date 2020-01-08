@@ -1,4 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19C57" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="APIEntity" representedClassName="APIEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="resource" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="ProfileEntity" representedClassName="ProfileEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="photoImage" optional="YES" attributeType="Binary"/>
+        <attribute name="thumbnailImage" optional="YES" attributeType="Binary"/>
+    </entity>
+    <elements>
+        <element name="ProfileEntity" positionX="-54" positionY="-9" width="128" height="88"/>
+        <element name="APIEntity" positionX="-36" positionY="36" width="128" height="58"/>
+    </elements>
 </model>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class Profile: Decodable {
     // Static Properties
@@ -50,6 +51,7 @@ class Profile: Decodable {
         let thumbnailUrlString = try container.decode(String.self, forKey: .thumbnailUrl)
         thumbnailUrl = URL(string: thumbnailUrlString)!
         
+        getThumbnailImage()
     }
     
     // Override Methods
@@ -72,18 +74,70 @@ class Profile: Decodable {
     
     private func fetchPhotoImage() {
         let task = URLSession(configuration: .default).dataTask(with: url) { (data, response, error) in
-            guard let data = data, error == nil else { return }
-            self.privatePhotoImage = UIImage(data: data)
+            guard let data = data, error == nil, let image = UIImage(data: data) else { return }
+            self.privatePhotoImage = image
             NotificationCenter.default.post(name: Profile.photoImageDownloadedNN, object: self)
         }
         task.resume()
     }
     private func fetchThumbnailImage() {
         let task = URLSession(configuration: .default).dataTask(with: thumbnailUrl) { (data, response, error) in
-            guard let data = data, error == nil else { return }
-            self.privateThumbnailImage = UIImage(data: data)
+            guard let data = data, error == nil, let image = UIImage(data: data) else { return }
+            self.privateThumbnailImage = image
             NotificationCenter.default.post(name: Profile.thumbnailImageDownloadedNN, object: self)
+            self.saveThumbNailImage()
         }
         task.resume()
+    }
+    
+    private func saveThumbNailImage() {
+        DispatchQueue.main.async {
+            guard
+                let imageData = self.privateThumbnailImage?.pngData(),
+                let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext,
+                let entity = NSEntityDescription.entity(forEntityName: "ProfileEntity", in: context)
+            else { return }
+            
+            let request = NSFetchRequest<NSManagedObject>(entityName: "ProfileEntity")
+            
+            do {
+                if let profile = try context.fetch(request).first(where: { (object) -> Bool in
+                    object.value(forKey: "id") as! Int == self.id
+                }) {
+                    profile.setValue(imageData, forKey: "thumbnailImage")
+                }
+                else {
+                    let profile = NSManagedObject(entity: entity, insertInto: context)
+                    profile.setValue(imageData, forKey: "thumbnailImage")
+                    profile.setValue(self.id, forKey: "id")
+                }
+                
+                try context.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+        }
+    }
+    
+    private func getThumbnailImage() {
+        DispatchQueue.main.async {
+            guard
+                let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
+            else { return }
+            
+            let request = NSFetchRequest<NSManagedObject>(entityName: "ProfileEntity")
+            
+            do {
+                if let profile = try context.fetch(request).first(where: { (object) -> Bool in
+                    object.value(forKey: "id") as! Int == self.id
+                }), let imageData = profile.value(forKey: "thumbnailImage") as? Data {
+                    
+                    self.privateThumbnailImage = UIImage(data: imageData)
+                }
+            }
+            catch let error as NSError {
+                print("Could not fetch. \(error), \(error.userInfo)")
+            }
+        }
     }
 }
