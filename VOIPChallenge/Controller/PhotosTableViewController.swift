@@ -55,16 +55,22 @@ class PhotosTableViewController: UITableViewController {
 // MARK: - Table View Delegate
 extension PhotosTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
+        if let albumCount = Database.profiles.last?.albumId {
+            return albumCount
+        }
+        else {
+            return 0
+        }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Database.profiles.count
+        return Database.profiles.filter({$0.albumId == section + 1}).count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: PhotosTableViewCell.reuseIdentifier) as! PhotosTableViewCell
-        cell.fill(with: Database.profiles[indexPath.row])
+        let album = Database.profiles.filter({$0.albumId == indexPath.section + 1})
+        cell.fill(with: album[indexPath.row])
         return cell
     }
     
@@ -75,5 +81,13 @@ extension PhotosTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         photoDetailViewController.profile = Database.profiles[indexPath.row]
         navigationController?.pushViewController(photoDetailViewController, animated: true)
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "Album \(section + 1)"
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 32.0
     }
 }
