@@ -33,6 +33,9 @@ class PhotosTableViewController: UITableViewController {
     // Override Methods
     // Private Types
     // Private Properties
+    
+    let photoDetailViewController = PhotoDetailViewController()
+    
     // Private Methods
     
     private func initView() {
@@ -49,6 +52,7 @@ class PhotosTableViewController: UITableViewController {
     }
 }
 
+// MARK: - Table View Delegate
 extension PhotosTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -66,5 +70,10 @@ extension PhotosTableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return PhotosTableViewCell.rowHeight
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        photoDetailViewController.profile = Database.profiles[indexPath.row]
+        navigationController?.pushViewController(photoDetailViewController, animated: true)
     }
 }
